@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+    <div class="music_modal_container" id="music_modal_container">
+
+        <div class="music_img_container">
+            <img src="./images/jcolefix.jpeg" id="cover">
+        </div>
+
+        <div class="music_modal_content">
+
+            <div class="music_no_container">
+                <span class="no_big music_no">01</span>
+                <span class="no_small music_no">01</span>
+            </div>
+<nav>
+    <a href="cth.html" class="nav_back_button">Back</a>
+    <span>Events</span>
+    <span>News</span>
+    <span>Contacs</span>
+</nav>
+
+<div class="music_details">
+    <span class="title" id="title">She Knows</span>
+    <span class="artist" id="artist">J cole</span>
+
+
+<div class="progress_bar" id="progress_bar">
+    <span id="currentTime">0:00</span>
+    <span id="duration">0:00</span>
+    <span class="progress" id="progress"></span>
+</div>
+
+<audio src="./music/She Knows.mp3" id="audio"></audio>
+
+
+    <div class="controls">
+        <!-- Previous Button -->
+        <button id="prev" class="action_btn">
+            <svg width="41" height="24"  viewBox="0 0 41 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 18V6l-8.5 6L11 18zM20 6l-8.5 6L20 18V6z" stroke="currentColor"stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              
+            </svg>
+        </button>
+  
+        <!-- Play / Pause Toggle Button -->
+        <button id="play" class="action_btn action_btn_big">
+            <svg id="pause_btn" width="41" height="24"  viewBox="0 0 41 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 5H9V19H6V5Z" fill="currentColor"/>
+                <path d="M15 5H18V19H15V5Z" fill="currentColor"/>
+              
+            </svg>
+
+            <svg id="play_btn" width="41" height="24"  viewBox="0 0 41 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="#1E1E1E" />
+               
+            </svg>
+            
+        </button>
+        
+        
+        <!-- Next Button -->
+        <button class="action_btn" id="next">
+            <svg width="41" height="24"  viewBox="0 0 41 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6v12l8.5-6L13 6zM4 6v12l8.5-6L4 6z"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+    </div>
+</div>
+
+    
+    <div class="music_albums">
+        <img id="jcolefix" src="./images/album cover/j_colee.jpeg" alt="">
+        <img id="liltjay" src="./images/album cover/lil_tjayy.jpeg" alt="">
+        <img id="chrisbrowncis" src="./images/album cover/chris_brownn.jpeg" alt="">
+        <img id="lilwaynecus" src="./images/album cover/lil_waynee.jpeg" alt="">
+        <img id="kndrcklmr" src="./images/album cover/kendrick_lamarr.jpeg" alt="">
+     
+    </div>
+    </div>
+    </div>
+   
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js" defer></script>
+</body>
+
+</html>

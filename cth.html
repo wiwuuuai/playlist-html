@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pilihan Koleksi Playlist</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #000000, #444444);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 36px;
+      color: #fff;
+    }
+
+    .playlist-container {
+      width: 90%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin: 40px auto;
+    }
+
+    .playlist {
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .playlist:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .playlist img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .playlist-name {
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #be2626d3;
+    }
+
+    /* Optional - Footer or space at bottom */
+    .spacer {
+      height: 50px;
+    }
+    /* Tombol Perkenalan Tim */
+#showTeamBtn {
+  margin-bottom: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #be2626d3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#showTeamBtn:hover {
+  background-color: #9e1e1e;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  color: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #f25353;
+}
+
+.modal-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal-content li {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.close {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: white;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Pilih Koleksi Playlist</h1>
+  <button id="showTeamBtn">Perkenalan Tim</button>
+
+  <div class="playlist-container">
+    <div class="playlist" onclick="goToPage('index.html')">
+      <img src="spiderman 2.png" alt="Lofi Chill">
+      <div class="playlist-name">Ailaaa</div>
+    </div>
+
+    <div class="playlist" onclick="goToPage('index.html')">
+      <img src="spiderman 2.png" alt="Workout Hits">
+      <div class="playlist-name">Alisah</div>
+    </div>
+
+    <div class="playlist" onclick="goToPage('index.html')">
+      <img src="spiderman 2.png" alt="Jazz Vibes">
+      <div class="playlist-name">Alanis</div>
+    </div>
+
+    <div class="playlist" onclick="goToPage('index.html')">
+      <img src="spiderman 2.png" alt="Indie Pop">
+      <div class="playlist-name">Andhika</div>
+    </div>
+
+    <div class="playlist" onclick="goToPage('index.html')">
+      <img src="spiderman 2.png" alt="Classical Focus">
+      <div class="playlist-name">Arip</div>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+
+<div id="teamModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tim Kami</h2>
+      <ul>
+        <li>1. Aila Andiera Pratiwi</li>
+        <li>2. Alisah Bakri</li>
+        <li>3. Alanis Zairah</li>
+        <li>4. Muhammad Andhika Alfathir</li>
+        <li>5. Syamsul Ma'Arief</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const modal = document.getElementById("teamModal");
+    const btn = document.getElementById("showTeamBtn");
+    const span = document.getElementsByClassName("close")[0];
+  
+    function goToPage(page) {
+      window.location.href = page;
+    }
+  
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+  
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  
+</body>
+</html>
